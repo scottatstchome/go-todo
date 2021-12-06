@@ -36,7 +36,7 @@ func ConnectDB() {
     configData := fmt.Sprintf(
         "host=%s port=%d user=%s password=%s dbname=%s sslmode=disable",
         "go-todo-db",
-        "5535",
+        "5435",
         "postgres",
         "root",
         "go-todo-db",
