@@ -4,14 +4,14 @@ version: "3"
 services:
   go-todo:
     container_name: go-todo
-    image: thisk8brd/go-todo:dev
+    image: scottatstchome/go-todo:dev
     build:
       context: .
     volumes:
       - .:/app
     ports:
-      - "5000:5000"
-      - "2345:2345"
+      - "$APP_PORT:$APP_PORT"
+      - "$DEBUG_PORT:$DEBUG_PORT"
     networks:
       - go-todo-network
   go-todo-db:
@@ -24,11 +24,11 @@ services:
     volumes:
       - postgres-db:/var/lib/postgresql/data
     ports:
-      - "5432:5432"
+      - "5535:5535"
     networks:
       - go-todo-network
 volumes:
   postgres-db:     
-   
+
 networks:
   go-todo-network:
