@@ -1,4 +1,4 @@
-module mytodo
+module go-todo
 
 go 1.13
 
