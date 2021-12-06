@@ -24,7 +24,7 @@ services:
     volumes:
       - postgres-db:/var/lib/postgresql/data
     ports:
-      - "5435:5435"
+      - "5435:5432"
     networks:
       - go-todo-network
 volumes:
